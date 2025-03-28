@@ -21,12 +21,12 @@
             animation: hackerBg 10s linear infinite;
         }
         .top-right-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
+            display: block;
+            width: fit-content;
+            margin: 20px auto 40px;
             background-color: green;
             color: white;
-            padding: 10px 15px;
+            padding: 15px 20px;
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
@@ -35,7 +35,7 @@
         .container {
             max-width: 90%;
             width: 400px;
-            margin: 100px auto 20px; /* Увеличен верхний отступ */
+            margin: 20px auto;
             padding: 10px;
             box-sizing: border-box;
             position: relative;
@@ -96,7 +96,7 @@
 <body>
     <a href="https://affpa.top/L?tag=d_3713491m_29091c_&site=3713491&ad=29091&r=registration" class="top-right-button">🏆 මෙය ක්‍රියාත්මක වන්නේ මේ වෙබ් අඩවියෙහි පමණි</a>
     <div class="container">
-        <h1 style="color: red; margin-top: 60px;">Aviator Signals</h1>
+        <h1 style="color: red; margin-top: 20px;">Aviator Signals</h1>
         <p class="stats">🔥 නිවැරදිභාවය: <span id="accuracy">75%</span> | 📈 ලාභය: <span id="profit">+35400 LKR</span> | 👥 මාර්ගගත: <span id="users">124</span></p>
         <div class="signal-box" id="signal">සංකේතය බලා සිටී...</div>
         <button onclick="startLoading()">🔄 සංකේතය යාවත්කාලීන කරන්න</button>
@@ -137,15 +137,6 @@
             document.getElementById("signal").innerText = "⏳ සංකේතය පූරණය වෙමින්...";
             setTimeout(generateSignal, 3000);
         }
-
-        function addFakeReview() {
-            let reviewBox = document.createElement("div");
-            reviewBox.className = "review-box";
-            reviewBox.innerText = reviews[Math.floor(Math.random() * reviews.length)];
-            document.getElementById("reviews").prepend(reviewBox);
-        }
-
-        setInterval(addFakeReview, 15000);
     </script>
 </body>
 </html>
